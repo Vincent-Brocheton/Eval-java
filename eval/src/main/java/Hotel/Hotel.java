@@ -14,5 +14,23 @@ public class Hotel extends ArrayList {
         this.etages = nbEtages;
         
     }
+
+    public int getNbChambre(int nbChambres){
+        return nbChambres;
+    }
+
+    public int nbChambresOccupées()
+    {
+    
+    }
+
+    public double tauxOccupation()
+    {
+
+    }
+
+    public void louerChambre(String type, String nomOccupant, int nbJoursRestants){
+        
+    }
     
 }
