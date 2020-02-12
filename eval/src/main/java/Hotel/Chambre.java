@@ -6,6 +6,7 @@ public class Chambre {
     public String type;
     public String[]types = {"Simple","Double", "Suite"};
     public String nomOccupant = null;
+    public boolean libre;
 
     public Chambre (int numeroChambre, String type)
     {
@@ -20,7 +21,13 @@ public class Chambre {
     }
 
     public boolean definirOccupant(String nomOccupant, int joursRestants){
-        boolean libre;
+        if(libre){
+            this.nomOccupant = nomOccupant;
+            this.joursRestants = joursRestants;
+            libre = false;
+        } else {
+            libre = false;
+        }
         
         return libre;
 
@@ -30,6 +37,14 @@ public class Chambre {
         for (int i = joursRestants; i > 0; i--) {
             joursRestants--;
             this.joursRestants = joursRestants;
+        }
+    }
+
+    public String toString(int numeroChambre, String type){
+        if(libre){
+            return "Chambre" + numeroChambre + " - " + type + " - libre";
+        } else {
+            return "Chambre" + numeroChambre + " - " + type + " - louée";
         }
     }
     
