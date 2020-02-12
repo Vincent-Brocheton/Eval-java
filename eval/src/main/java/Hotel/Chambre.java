@@ -2,10 +2,10 @@ package Hotel;
 
 public class Chambre {
     public int numeroChambre;
-    public int joursRestants;
+    public int joursRestants = 0;
     public String type;
     public String[]types = {"Simple","Double", "Suite"};
-    public String nomOccupant;
+    public String nomOccupant = null;
 
     public Chambre (int numeroChambre, String type)
     {
@@ -17,15 +17,20 @@ public class Chambre {
             this.type = "Simple";
             } 
         }
-        joursRestants = 0;
-        nomOccupant = null;
     }
 
     public boolean definirOccupant(String nomOccupant, int joursRestants){
         boolean libre;
-        if(numeroChambre)
+        
         return libre;
 
+    }
+
+    public void jourSuivant(int joursRestants) {
+        for (int i = joursRestants; i > 0; i--) {
+            joursRestants--;
+            this.joursRestants = joursRestants;
+        }
     }
     
 }
