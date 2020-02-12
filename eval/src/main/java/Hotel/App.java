@@ -1,4 +1,4 @@
-package Evaluation;
+package Hotel;
 
 /**
  * Hello world!

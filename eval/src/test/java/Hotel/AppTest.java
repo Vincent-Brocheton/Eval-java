@@ -1,4 +1,4 @@
-package Evaluation;
+package Hotel;
 
 import org.junit.Test;
 
